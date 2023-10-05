@@ -12,18 +12,13 @@ body, header,nav,main,footer,img, h1, h3, ul {
 /* style rule for images */
 img {
     max-width: 100%;
-     display: block;
-}
-
- /* hide tab-desk content */
-.tab-desk {
-    display: none;
+    display: block;
 }
 
 /* style rule for mobile */
 #mobile h1,h3 {
- padding: 2%;
- text-align: center;
+    padding: 2%;
+    text-align: center;
 }
 
 #mobile h1 {
@@ -42,56 +37,56 @@ body {
 
 /* style rule for navigation */
 nav {
-background-color: #2a1f14;
+    background-color: #2a1f14;
 }
 
 nav ul {
-list-style-type: none;
-text-align: center;
+    list-style-type: none;
+    text-align: center;
 }
 
 nav li {
-display: block;
-font-size: 1.5em;
-font-family: geneva, Arial, sans-serif;
-font-weight: bold;
-border-top: solid 0.5px #f6eee4;
+    display: block;
+    font-size: 1.5em;
+    font-family: geneva, Arial, sans-serif;
+    font-weight: bold;
+    border-top: solid 0.5px #f6eee4;
 }
 
 nav li a {
-display: block;
-color: #f6eee4;
-padding-top: 0.5em ;
-padding-bottom: 0.5em ;
-padding-left: 2em ;
-padding-right: 2em ;
-text-decoration: none;
+    display: block;
+    color: #f6eee4;
+    padding-top: 0.5em ;
+    padding-bottom: 0.5em ;
+    padding-left: 2em ;
+    padding-right: 2em ;
+    text-decoration: none;
 }
 
 /* Style for main content */
 main {
-padding: 2%;
-font-family: 'Lora', serif;
+    padding: 2%;
+    font-family: 'Lora', serif;
 
 }
 
 main p {
-font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 main h3 {
-padding-top: 2%;
+    padding-top: 2%;
 }
 
 main ul {
-list-style-type: square;
+    list-style-type: square;
 }
 
 .link {
-color: #4d3319;
-text-decoration: none;
-font-weight: bold ;
-font-style: italic;
+    color: #4d3319;
+    text-decoration: none;
+    font-weight: bold ;
+    font-style: italic;
 }
 
 .action {
@@ -130,17 +125,102 @@ font-style: italic;
 }
 /* style rule for footer content */
 footer {
-text-align: center;
-font-size: 0.85em;
-background-color: #2a1f14;
-color: #f6eee4;
-padding-top: 1% ;
-padding-bottom: 1% ;
-padding-left: 0% ;
-padding-right: 0% ;
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #2a1f14;
+    color: #f6eee4;
+    padding-top: 1% ;
+    padding-bottom: 1% ;
+    padding-left: 0% ;
+    padding-right: 0% ;
 }
 
 footer a {
-color: #f3e6d8;
-text-decoration: none;
+    color: #f3e6d8;
+    text-decoration: none;
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px), print {
+
+    /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /*Tablet Viewport: Style rules for nav area*/
+    nav li {
+        border-top: 0;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+
+    nav li a {
+        padding: 0.5em;
+    }
+
+}
+
+/* Media Query for Desktop Viewport*/
+@media screen and (min-width: 1000px), print {
+    
+    /*Desktop Viewport: Style rules for nav area*/
+    nav li {
+        font-size: 1.5em;
+    }
+
+    nav li a {
+        padding-top: 0.5em ;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    nav li a:hover {
+        color: #2a1f14;
+        background-color: #f6eee4;
+    }
+
+    /*Desktop Viewport: Style rules for Main Content*/
+
+    #info ul {
+        margin-left: 5%;
+    }
+}
+
+/*Media Query for Large Desktop*/
+@media screen and (min-width: 1921px) {
+
+    /*Large Desktop Viewport: Style Rule for Body*/
+    body {
+        background: linear-gradient(#f6eee4, #78593a);
+    }
+
+    /*Large Desktop Viewport: Style Rule for #Wrapper*/
+    #wrapper {
+        width: 1920px;
+        margin-top: 0 ;
+        margin-bottom: 0 ;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    main {
+        background-color: #f6eee4;
+    }
+}
+
+/*Media Query for Print*/
+@media print {
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
 }
