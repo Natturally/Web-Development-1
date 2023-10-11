@@ -27,6 +27,14 @@ img {
 }
 
 /*Style rule for mobile viewport*/
+
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
  /* Style rule for header */
 header{
     top: 0;
@@ -67,7 +75,7 @@ nav li a {
 }
 
 /* Media Query for tablet viewport */
-@media screen and (min-width: 630px), print {
+@media screen and (min-width: 675px), print {
    
     .mobile {
         display: none;
