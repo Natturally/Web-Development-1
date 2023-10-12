@@ -16,6 +16,14 @@ img {
 }
 
 /* style rule for mobile */
+.mobile {
+    display: block;
+}
+
+.tab-desk {
+    display: none;
+}
+
 #mobile h1,h3 {
     padding: 2%;
     text-align: center;

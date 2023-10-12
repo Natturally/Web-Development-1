@@ -1,5 +1,5 @@
 /*CSS RESET */
-body, header, nav, main, footer, img, h1, ul {
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,9 +10,46 @@ img {
     display: block;
 }
 
+/* Style rule for box sizing applies to all elements*/
+* {
+    box-sizing: border-box;
+}
+
 /* style rule for viewport */
 .tab-desk {
     display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #373684;
+    text-shadow: 3px 3px 10px #8280cb;
+}
+
+figure {
+    position: relative;
+    max-width: 275px;
+    margin: 2% auto;
+    border: 8px solid #373684;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(55, 54, 132, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    font-family: verdana, Arial, Sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 /* style rule header */
@@ -130,13 +167,23 @@ footer a {
 
 @media screen and (min-width: 550px), print {
     
-    /*Tbalet Viewport: Show Tab-desk class, hide mobile class */
+    /*Tablet Viewport: Show Tab-desk class, hide mobile class */
     .tab-desk {
         display: block;
     }
 
     .mobile {
         display: none;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    aside {
+        grid-column: 3 / span 2;
     }
 
     /*Tablet Viewport: Style rule for header content */
@@ -169,7 +216,20 @@ footer a {
 }
 
 /* Media Query for desktop viewport*/
-@media screen and (min-width: 769px), print{
+@media screen and (min-width: 760px), print{
+
+    .grid {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    figcaption {
+        font-size: 1em;
+    }
+
+    aside {
+        grid-column: 1 / span 4;
+
+    }
 
     /*Desktop Viewport: Style Rule for header*/
     header {
