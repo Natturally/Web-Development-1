@@ -121,7 +121,7 @@ main p {
     border-radius: 8px;
 }
 
-#contact {
+#contact, #contact h2, #rental h2 {
     text-align: center;
 }
 
@@ -130,6 +130,8 @@ main p {
     text-decoration: none;
     font-weight: bold;
 }
+
+
 
 .tel-link {
     background-color: #373684;
@@ -152,6 +154,61 @@ main p {
     height: 50%;
 }
 
+/*Style rule for table*/
+table {
+    border: 1px solid #373682;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th, td {
+    border: 1px solid #373684;
+    padding: 2%;
+}
+
+th {
+    background-color: #373684;
+    color: #fff;
+    font-size: 1.15em;
+}
+
+tr:nth-child(odd) {
+    background-color: #b7b7e1;
+}
+
+
+/* Style Rule for form elements*/
+
+fieldset, input {
+    margin-bottom: 2%;
+}
+
+fieldset, legend {
+font-weight: bold;
+font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding: 3%;
+}
+
+#submit {
+    margin: 0 auto;
+    display: block;
+    padding: 3%;
+    background-color: #b7b7e1;
+    font-size: 1em;
+}
+
+/*Style rule for footer element*/
 footer {
     text-align: center;
     font-size: 0.65em;
@@ -213,6 +270,13 @@ footer a {
         height: 450px;
     }
 
+    /*Tablet Viewport: Style rule for form element*/
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+
 }
 
 /* Media Query for desktop viewport*/
@@ -266,6 +330,22 @@ footer a {
         margin-bottom: 0 ;
         margin-left: 2% ;
         margin-right: 2% ;
+    }
+
+    /*Desktop Viewport: Style rule for table*/
+    table {
+        width: 70%;
+    }
+
+    /*Desktop Viewport: Style rule for form element*/
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 2;
     }
 }
 
